@@ -11,7 +11,7 @@ if test "$command" = build
     for sln in (find -name '*.sln')
         dotnet build $sln
     end
-else if "$command" = test
+else if test "$command" = test
     for sln in (find -name '*.sln')
         dotnet test $sln
     end
